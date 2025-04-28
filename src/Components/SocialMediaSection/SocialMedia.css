@@ -1,0 +1,16 @@
+.social-media{
+  display: flex;
+  /* justify-content: center; */
+  gap: 12px;
+  text-align: left;
+ margin-top: 10px; /* place-items: left; */
+}
+.social-media a {
+  color: #f1f1f1;
+  font-size: 1.6rem;
+  transition: color 0.3s;
+}
+
+.social-media a:hover {
+  color: #62bdf5;
+}

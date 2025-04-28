@@ -1,0 +1,161 @@
+/* Home.css */
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  /* min-height: 100vh; */
+  /* background: linear-gradient(
+    135deg,
+    rgb(24, 14, 68),
+    rgb(52, 61, 145),
+    rgb(216, 98, 210)
+  ); */
+  /* background: linear-gradient(135deg, rgb(24, 14, 68), rgb(64, 43, 105)); */
+  /* background: linear-gradient(135deg, #e0f7fa, #e3f2fd); Soft gradient background */
+}
+
+.content {
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center;
+  text-align: center;
+  gap: 1.5rem; */
+  /* max-width: 900px; */
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row; /* Side-by-side layout on larger screens */
+    text-align: left;
+  }
+}
+
+.intro-text {
+  max-width: 500px;
+}
+
+.greeting {
+  font-size: 1.2rem;
+  color: #c0c4e8;
+  margin-bottom: 0.5rem;
+}
+
+.intro-heading h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  display: inline-block;
+  overflow: hidden; /* Hide the extra part of the text */
+  white-space: nowrap; /* Prevent the text from wrapping */
+  width: 0; /* Initial width to animate from 0 */
+  animation: typing 3s steps(15) infinite alternate, blink-cursor 0.75s step-end infinite alternate;
+  border-right: 0.1em solid #fff;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from{
+    width: 0;
+  }
+  to {
+    width: 100%; /* Full width of the text */
+  }
+}
+/* Blinking cursor */
+@keyframes blink {
+  0% {
+    border-right: 0.1em solid transparent;
+  }
+  50% {
+    border-right: 0.1em solid #fff;
+  }
+  100% {
+    border-right: 0.1em solid transparent;
+  }
+}
+
+.intro-heading .highlight {
+  color: #3de9a1;
+  text-shadow: 0px 10px 20px rgba(70, 55, 62, 0.4);
+}
+
+.intro-heading h2 {
+  font-size: 1.5rem;
+  color: #d1d4f1;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.details {
+  font-size: 1rem;
+  color: #bbbbee;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #181a3f; /* Darker shade to contrast with light button */
+  background-color: #8fd3fe;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  box-shadow:  10px 10px 20px rgba(43, 41, 42, 0.6)
+}
+
+.cta-button:hover {
+  background-color: #7abee2;
+}
+
+.image-wrapper {
+  /* position: relative; */
+  /* width: 380px;
+  height: 680px; */
+  /* overflow: hidden; */
+  /* border-radius: 50%; */
+  /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4); Subtle shadow for image */
+}
+
+.profile-image {
+  width: 50%;
+  height: 75%;
+  object-fit:contain;
+  border-radius: 50%;
+  /* transition: transform 0.5s ease; */
+}
+
+/* .profile-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+/*} */
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .home-section {
+    padding: 1.5rem;
+    flex-direction: column-reverse;
+  }
+
+  .intro-heading h1 {
+    font-size: 2rem;
+  }
+
+  .intro-heading h2 {
+    font-size: 1.3rem;
+  }
+
+  .details {
+    font-size: 0.9rem;
+  }
+
+  .image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
+

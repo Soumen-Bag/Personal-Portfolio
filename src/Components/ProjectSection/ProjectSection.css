@@ -1,0 +1,126 @@
+/* ProjectSection.css */
+.projectSection {
+  padding: 60px 20px;
+
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.projectCard {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 320px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+.projectImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.projectContent {
+  padding: 25px;
+}
+
+.projectContent h3 {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+  color: #e3f2fd;
+}
+
+.projectContent p {
+  font-size: 1rem;
+  color: #e0f7fa;
+  margin-bottom: 25px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.projectButton {
+  background-color: #f06292;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.projectButton:hover {
+  background-color: #ec407a;
+}
+
+@media (max-width: 1024px) {
+  .projectsContainer {
+    gap: 20px;
+  }
+
+  .projectCard {
+    max-width: 45%;
+  }
+}
+/* for mobile */
+@media (max-width: 768px) {
+  .projectsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projectCard {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .sectionTitle {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .projectContent h3 {
+    font-size: 1.5rem;
+  }
+
+  .projectContent p {
+    font-size: 0.9rem;
+  }
+
+  .projectButton {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
